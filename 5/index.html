@@ -1,302 +1,345 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>项目二测试：18741 郑杰 201807040113</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font: 400 15px Lato, sans-serif;
+            color: #818181;
+            line-height: 1.8;
+        }
+
+        /* 去除icon-bar的边框和背景样式 */
+        .navbar-toggle,
+        .navbar-default .navbar-toggle:focus,
+        .navbar-default .navbar-toggle:hover {
+            background-color: #f4511e;
+            border: #f4511e;
+        }
+
+        /* 改变导航条和巨幕的背景颜色 */
+        #myNav,
+        .jumbotron {
+            background: #f4511e;
+        }
+
+        /* 导航条按钮样式 */
+        #myNav a {
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* 导航条下边框 */
+        .navbar {
+            border: none;
+        }
+
+        /* 巨幕块的字体颜色样式 */
+        .jumbotron {
+            text-align: center;
+            color: white;
+        }
+
+        /* 巨幕块的按钮样式 */
+        .jumbotron a {
+            margin-left: 10px;
+        }
+
+        /* 三大块的上边距 */
+        .SERVICES,
+        .Portfolio,
+        .CONTACT {
+            padding: 50px 0;
+        }
+
+
+        /* About块的地球样式 */
+        .earth {
+            font-size: 200px;
+            color: #f4511e;
+        }
+
+        /* services块样式 */
+        .services {
+            font-size: 50px;
+            color: #f4511e;
+        }
+
+        /* Portfolio和CONTACT块的灰色背景 */
+        .Portfolio,
+        .CONTACT {
+            background: #f6f6f6;
+        }
+
+        /* Portfolio块的缩略图背景 */
+        .thumbnail {
+            background: white;
+            border: none;
+        }
+
+        /* 匹配手机的样式 */
+        @media (max-width: 768px) {
+            #logo {
+                font-weight: bolder;
+                display: inline-block !important;
+            }
+
+            /* Logo上边框 */
+            .navbar-collapse {
+                border: none;
+            }
+
+            /* 按钮的边距 */
+            .navbar-toggle {
+                padding-right: 32px;
+                padding-top: 12px;
+            }
+
+            /* 手机模式下About板块隐藏 */
+            .About {
+                display: none;
+            }
+
+            /* CONTACT版块的按钮 */
+            .CONTACT .btn-right {
+                text-align: right;
+            }
+
+            /* 缩略图边距 */
+            .thumbnail {
+                padding: 0;
+            }
+        }
+
+        /*其他样式自己补充在这里*/
+    </style>
 </head>
 
-<body>
-    <!--头部-->
-    <div>
-        <nav class="navbar navbar-default navbar-fixed-top" id="myNav">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="#"><img src="img/logo.png" alt="Logo"></a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse navbar-left">
+<body data-spy="scroll" data-target="#myNav">
+    <!--
+        	描述：第一部分响应式导航条（20分）
+        	要求： 1.导航条背景颜色：#f4511e；
+		          2.字体： Montserrat, sans-serif;
+		          3.文字颜色: #FFFFFF；
+        -->
+    <nav class="navbar navbar-default navbar-fixed-top" id="myNav">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="logo" class="collapse navbar-collapse navbar-left">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#">产品</a></li>
-                        <li><a href="#">支持中心</a></li>
-                        <li><a href="#">成功案例</a></li>
-                        <li><a href="#">社区</a></li>
+                        <li><a href="#">Logo</a></li>
                     </ul>
                 </div>
-                <div class="nav navbar-nav navbar-right myLogin">
-                    <a class="navbar-text navbar-link" href="#">微博登录</a>
-                    <a class="navbar-text" href="#">|</a>
-                    <a class="navbar-text navbar-link" href="#">微博注册</a>
-                </div>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-        </nav>
-        <div id="carousel" class="carousel slide" data-ride="carousel" style="margin-top: 50px">
-            <ol class="carousel-indicators">
-                <li class="active" data-slide-to="0" data-target="#carousel"></li>
-                <li data-slide-to="1" data-target="#carousel"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <a href="#"><img src="img/1.jpg" alt=""></a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="img/2.jpg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--主体-->
-    <div class="container">
-        <div class="row cont">
-            <div class="col-md-4 col-xs-12 text-center">
-                <img src="img/cont1.png" alt="">
-                <h3>SAE</h3>
-                <p>云应用</p>
-            </div>
-            <div class="col-md-8 col-xs-12">
-                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
-                <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#About">About</a></li>
+                    <li><a href="#SERVICES">SERVICES</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#PRICING">PRICING</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
                 </ul>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <div class="btn-center">
-                    <a class="btn btn-primary" href="#">了解详情</a>
-                </div>
             </div>
-        </div>
-        <div class="row cont">
-            <div class="col-md-4 col-xs-12 col-md-push-8 text-center">
-                <img src="img/cont2.png" alt="">
-                <h3>SAE</h3>
-                <p>云应用</p>
-            </div>
-            <div class="col-md-8 col-xs-12 col-md-pull-4">
-                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
-                <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <div class="btn-center">
-                    <a class="btn btn-primary" href="#">了解详情</a>
-                </div>
-            </div>
-        </div>
-        <div class="row cont">
-            <div class="col-md-4 col-xs-12 text-center">
-                <img src="img/cont3.png" alt="">
-                <h3>SAE</h3>
-                <p>云应用</p>
-            </div>
-            <div class="col-md-8 col-xs-12">
-                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
-                <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <div class="btn-center">
-                    <a class="btn btn-primary" href="#">了解详情</a>
-                </div>
-            </div>
-        </div>
-        <div class="row cont">
-            <div class="col-md-4 col-xs-12 col-md-push-8 text-center">
-                <img src="img/cont4.png" alt="">
-                <h3>SAE</h3>
-                <p>云应用</p>
-            </div>
-            <div class="col-md-8 col-xs-12 col-md-pull-4">
-                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
-                <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <div class="btn-center">
-                    <a class="btn btn-primary" href="#">了解详情</a>
-                </div>
-            </div>
-        </div>
-        <div class="row cont">
-            <div class="col-md-4 col-xs-12 text-center">
-                <img src="img/cont5.png" alt="">
-                <h3>SAE</h3>
-                <p>云应用</p>
-            </div>
-            <div class="col-md-8 col-xs-12">
-                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
-                <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <ul class="col-md-6 col-xs-12">
-                    <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
-                    <li>沙箱技术隔离应用</li>
-                    <li>无需运维管理与架构设计</li>
-                </ul>
-                <div class="btn-center">
-                    <a class="btn btn-primary" href="#">了解详情</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="video">
-        <a href="#">
-            <img style="width: 100%" class="img-responsive" src="img/video.png" alt="">
-        </a>
-    </div>
-    <div class="container">
-        <h3>产品特色</h3>
-        <div class="row">
-            <div class="col-md-3 col-xs-6">
-                <div class="text-center">
-                    <img src="img/icon1.png" alt="">
-                    <p>安全可靠</p>
-                </div>
-                <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="text-center">
-                    <img src="img/icon2.png" alt="">
-                    <p>安全可靠</p>
-                </div>
-                <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="text-center">
-                    <img src="img/icon3.png" alt="">
-                    <p>安全可靠</p>
-                </div>
-                <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <div class="text-center">
-                    <img src="img/icon4.png" alt="">
-                    <p>安全可靠</p>
-                </div>
-                <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <h3>成功案例</h3>
-        <div class="row">
-            <div class="col-md-5 col-xs-12">
-                <img style="width: 100%" class="img-responsive" src="img/typical.png" alt="">
-            </div>
-            <div class="col-md-7 col-xs-12">
-                <p class="success">
-                    SAE作为公有云服务，其整体架构具有高可靠性和安全性，并具备专业的团队来负责安全及运营维护工作，因而极大地简化了项目组部署和维护工作，使得项目组能集中精力于核心业务的开发，为用户提供更好的体验。
-                </p>
-            </div>
-        </div>
-    </div>
 
-    <!--尾部-->
-    <div class="container footer">
-        <div class="row">
-            <div class="col-md-2 col-xs-6">
-                <h3>产品</h3>
-                <ul>
-                    <li> <a href="">云应用SAE</a></li>
-                    <li> <a href="">云应用SAE</a></li>
-                    <li> <a href="">云应用SAE</a></li>
-                    <li> <a href="">云应用SAE</a></li>
-                    <li> <a href="">云应用SAE</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-xs-6">
-                <h3>支持中心</h3>
-                <ul>
-                    <li><a href="">产品文档</a></li>
-                    <li><a href="">产品文档</a></li>
-                    <li><a href="">产品文档</a></li>
-                    <li><a href="">产品文档</a></li>
-                    <li><a href="">产品文档</a></li>
-                    <li><a href="">产品文档</a></li>
-                    <li><a href="">产品文档</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-xs-6">
-                <h3>成功案例</h3>
-                <ul>
-                    <li><a href="">游戏</a></li>
-                    <li><a href="">游戏</a></li>
-                    <li><a href="">游戏</a></li>
-                    <li><a href="">游戏</a></li>
-                    <li><a href="">游戏</a></li>
-                    <li><a href="">游戏</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-xs-6">
-                <h3>关注我们</h3>
-                <ul>
-                    <li><a href="">招聘信息</a></li>
-                    <li><a href="">招聘信息</a></li>
-                    <li><a href="">招聘信息</a></li>
-                    <li><a href="">招聘信息</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-xs-12">
-                <h3>关于新浪云</h3>
-                <p>掌上SAE客户端</p>
-                <img src="img/sao.png" alt="">
-            </div>
-            <div class="col-md-2 col-xs-12">
-                <h3>可信云认证</h3>
-                <img src="img/kexinyun.png" alt="">
-                <a href="#">对象存储服务NO：02005</a>
-                <a href="#">对象存储服务NO：02005</a>
-                <a href="#">对象存储服务NO：02005</a>
+        </div>
+    </nav>
+    <div class="scrollcontent" data-target="#myNav" data-spy="scroll">
+        <!--
+        	描述：第二部分:巨幕   10分
+        	要求：1.请在div中添加未完成的表单
+	-->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Company</h1>
+                <p>We specialize in blablabla</p>
+                <input type="text" placeholder="Email Address" class="col-md-5 col-xs-8 col-md-offset-3 input-lg" />
+                <a class="col-md-1 col-xs-3 btn btn-danger btn-lg" href="#" role="button">Subcribe</a>
             </div>
         </div>
-        <hr />
-        <div class="row">
-            <p class="text-center">
-                Copyright &copy; 1996-2015 SINA Corporation All Rights Reserved. 京ICP证0000007-104
-            </p>
+        <!--
+                描述：第三部分：公司介绍  20分
+                请使用媒体查询+栅格系统+按钮+图标完善第三部分内容
+                要求：1.图标类型： glyphicon-globe；
+                      2.大小font-size: 200px;
+                      3.颜色: #f4511e;
+                      4.大屏幕下分两列，小屏幕下独占一列
+                      5.小屏幕下第三部分隐藏不可见
+        -->
+        <div class="container About" id="About">
+            <div class="col-md-7">
+                <h2>About Company Page</h2>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <button type="button" class="btn btn-default btn-lg">Get in Touch</button>
+            </div>
+
+            <div class="col-md-4">
+                <span class="earth glyphicon glyphicon-globe"></span>
+            </div>
+        </div>
+        <!--
+                描述：第四部分：SERVICES服务  （15分）
+                类似第三部分，请使用栅格系统+图标完善第三部分内容
+                要求：1.图标类型： glyphicon-off  glyphicon-heart glyphicon-lock
+                      glyphicon-leaf  glyphicon-certificate glyphicon-wrench；
+                      2.图标大小font-size: 50px;
+                      3.颜色: #f4511e;
+                      4.大屏幕下分三列，小屏幕下独占一列
+                        文本： <h4>POWER LOVE JOB DONE</h4>
+                        <p>Lorem ipsum dolor sit amet..</p>
+        -->
+        <div class="container SERVICES" id="SERVICES">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>SERVICES</h1>
+                    <p>What we offer</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="services glyphicon glyphicon-off"></span>
+                    <h4>POWER</h4>
+                    <p>Lorem ipsum dolor sit amet..</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="services glyphicon glyphicon-heart"></span>
+                    <h4>LOVE</h4>
+                    <p>Lorem ipsum dolor sit amet..</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="services glyphicon glyphicon-lock"></span>
+                    <h4>JOB DONE</h4>
+                    <p>Lorem ipsum dolor sit amet..</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="services glyphicon glyphicon-leaf"></span>
+                    <h4>POWER</h4>
+                    <p>Lorem ipsum dolor sit amet..</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="services glyphicon glyphicon-certificate"></span>
+                    <h4>LOVE</h4>
+                    <p>Lorem ipsum dolor sit amet..</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="services glyphicon glyphicon-wrench"></span>
+                    <h4>JOB DONE</h4>
+                    <p>Lorem ipsum dolor sit amet..</p>
+                </div>
+            </div>
+        </div>
+        <!--
+                描述：第五部分：Portfolio 缩略图 （15分）
+                要求： 1.缩略图区域背景颜色：#f6f6f6；
+                      2.图片去掉边框线
+                      3.图片大小继承父元素大小
+                      4.标题居中
+                文本：New York Paris San Francisco
+                We built New York   Yes, we built Pari  Yes, we built San Francisco
+        -->
+        <div class="container Portfolio" id="Portfolio">
+            <div class="text-center">
+                <h2>Portfolio</h2>
+                <h4>What we have created</h4>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="img/newyork.jpg" alt="">
+                    <p>New York</p>
+                    <p>We built New York</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="img/paris.jpg" alt="">
+                    <p>Paris</p>
+                    <p>Yes, we built Pari</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="img/sanfran.jpg" alt="">
+                    <p>San Francisco</p>
+                    <p>Yes, we built San Francisco</p>
+                </div>
+            </div>
+        </div>
+        <!--
+                描述：第六部分：表单（15分）
+                要求： 1.区域背景颜色：#f6f6f6；
+                      2.图标采用默认大小
+                图标类型：glyphicon-map-marker glyphicon-phone glyphicon-envelope
+                文本：Chicago, US
+            -->
+        <div class="container CONTACT" id="CONTACT">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>CONTACT</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 col-xs-12 text-center">
+                    <p>
+                        Contact us and we'll get back to you within 24 hours.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                        Chicago, US
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-phone"></span>
+                        +00 1515151515
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        myemail@something.com
+                    </p>
+                </div>
+                <div class="col-sm-7 col-xs-12">
+                    <!--描述：文本域组件-->
+                    <div class="col-sm-6 col-xs-12 form-group">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-sm-6 col-xs-12 form-group">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-sm-12 col-xs-12 form-group">
+                        <textarea class="form-control" placeholder="Comment" rows="5"></textarea>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 btn-right">
+                        <button type="submit" class="brn btn-primary btn-lg col-sm-2 col-sm-push-10">Send</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script src="js/jquery-2.2.4.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!--
+        	描述：第七部分 页面脚部  （5分）
+        	请在此区域标注：个人 班级 姓名 学号
+        -->
+    <footer class="container-fluid bg-grey text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="#"><span class="glyphicon glyphicon-chevron-up logo-min"></span></a>
+                <p>版权说明@：18741 郑杰 201807040113 </p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

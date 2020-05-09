@@ -1,163 +1,306 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
-	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<script src="js/jquery-2.2.4.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-	<div class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand"></a>
-			</div>
-			<label id="toggle-checkbox" class="visible-xs-inline-block" for="toggle">MENU</label>
-			<input class="hidden" id="toggle" type="checkbox">
-			<div class="hidden-xs">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="">首页</a></li>
-					<li><a href="">国内</a></li>
-					<li><a href="">国际</a></li>
-					<li><a href="">数独</a></li>
-					<li><a href="">社会</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="login.html">登录</a></li>
-					<li><a href="signup.html">注册</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-2">
-				<!--
-                    	作者：411426414@qq.com
-                    	时间：2020-05-07
-                    	描述：left
-                    -->
-				<div class="list-group side-bar">
-					<a href="#" class="list-group-item active">综合</a>
-					<a href="#" class="list-group-item">电影</a>
-					<a href="#" class="list-group-item">电视剧</a>
-					<a href="#" class="list-group-item">明星</a>
-				</div>
-			</div>
-			<div class="col-sm-7">
-				<!--
-	                	作者：411426414@qq.com
-	                	时间：2020-05-07
-	                	描述：center
-	                -->
-				<div class="news-list">
-					<!--
-                        作者：411426414@qq.com
-                        时间：2020-05-07
-                        描述：列表开始
-                    -->
-					<div class="news-list-item clearfix">
-						<div class="col-xs-5">
-							<img src="img/1.jpg" alt="" />
-						</div>
-						<div class="col-xs-7">
-							<a href="news.html" class="title">美军B1B轰炸机再次抵近中国近海 3天内第2次</a>
-							<div class="info">
-								<span class="avatar">
-									<img src="img/2.jpg" />
-								</span>
-								</span>王华华</span>.
-								<span>25K评论</span>.
-								<span>10分钟前</span>
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="news-list-item clearfix">
-						<div class="col-xs-5">
-							<img src="img/5.jpg" alt="" />
-						</div>
-						<div class="col-xs-7">
-							<a href="#" class="title">抗战时期的东江纵队医务队：用剃头刀取出伤员骨中子弹</a>
-							<div class="info">
-								<span class="avatar">
-									<img src="img/2.jpg" />
-								</span>
-								</span>王华华</span>.
-								<span>25K评论</span>.
-								<span>10分钟前</span>
-								</span>
-							</div>
-						</div>
-					</div>
-					<!--
-						作者：411426414@qq.com
-						时间：2020-05-07
-						描述：列表结束
-					-->
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<!--
-                    	作者：411426414@qq.com
-                    	时间：2020-05-07
-                    	描述：right
-                    -->
-				<div class="search-bar">
-					<input type="search" class="form-control" placeholder="搜索" />
-				</div>
-				<div class="side-bar-card flag clearfix">
-					<div class="col-xs-5">
-						<div class="logo"></div>
-					</div>
-					<div class="col-xs-7">
-						<div class="text-lg">有害信息举报专区</div>
-						<div>举报电话：12377</div>
-					</div>
-				</div>
-				<div class="side-bar-card">
-					<div class="card-title">24小时热闻</div>
-					<div class="card-body">
-						<div class="list">
-							<!--
-                               作者：411426414@qq.com
-                               时间：2020-05-07
-                               描述：新闻列表
-                            -->
-							<div class="item">
-								<a href="#" class="title">美媒警告：如美国会同意起诉中国 将会付出惨重代价</a>
-								<a class="desc">15k阅读 1k评论</a>
-							</div>
-							<div class="item">
-								<a href="#" class="title">中国FTC-2000G战机首次出口 兼具多项功能性价比高</a>
-								<a class="desc">15k阅读 1k评论</a>
-							</div>
-							<div class="item">
-								<a href="#" class="title">美军机为何密集闯台海南海 想监视中国这款战略武器</a>
-								<a class="desc">15k阅读 1k评论</a>
-							</div>
-							<div class="item">
-								<a href="#" class="title">中国新型大口径高精狙曝光 可狙杀3公里外目标(图)</a>
-								<a class="desc">15k阅读 1k评论</a>
-							</div>
-							<div class="item">
-								<a href="#" class="title">长征5B刚发射成功 美国就搞了个十分恶劣的太空计划</a>
-								<a class="desc">15k阅读 1k评论</a>
-							</div>
-						</div>
-					</div>
-				</div>
+    <!--头部-->
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top" id="myNav">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#"><img src="img/logo.png" alt="Logo"></a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li><a href="carousel">首页</a></li>
+                        <li><a href="A">产品</a></li>
+                        <li><a href="B">支持中心</a></li>
+                        <li><a href="C">成功案例</a></li>
+                        <li><a href="D">社区</a></li>
+                        <li><a href="E">信息</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="nav navbar-nav navbar-right myLogin">
+                    <a class="navbar-text navbar-link" href="#">微博登录</a>
+                    <a class="navbar-text" href="#">|</a>
+                    <a class="navbar-text navbar-link" href="#">微博注册</a>
+                </div> -->
+            </div>
+        </nav>
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="margin-top: 50px">
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#carousel"></li>
+                <li data-slide-to="1" data-target="#carousel"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="#"><img src="img/1.jpg" alt=""></a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="img/2.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollspy">
+        <!--主体-->
+        <div class="container" id="A">
+            <div class="row cont">
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="img/cont1.png" alt="">
+                    <h3>SAE</h3>
+                    <p>云应用</p>
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                    <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a class="btn btn-primary" href="#">了解详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cont">
+                <div class="col-md-4 col-xs-12 col-md-push-8 text-center">
+                    <img src="img/cont2.png" alt="">
+                    <h3>SAE</h3>
+                    <p>云应用</p>
+                </div>
+                <div class="col-md-8 col-xs-12 col-md-pull-4">
+                    <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                    <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a class="btn btn-primary" href="#">了解详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cont">
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="img/cont3.png" alt="">
+                    <h3>SAE</h3>
+                    <p>云应用</p>
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                    <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a class="btn btn-primary" href="#">了解详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cont">
+                <div class="col-md-4 col-xs-12 col-md-push-8 text-center">
+                    <img src="img/cont4.png" alt="">
+                    <h3>SAE</h3>
+                    <p>云应用</p>
+                </div>
+                <div class="col-md-8 col-xs-12 col-md-pull-4">
+                    <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                    <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a class="btn btn-primary" href="#">了解详情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cont">
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="img/cont5.png" alt="">
+                    <h3>SAE</h3>
+                    <p>云应用</p>
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                    <p>国内第一家公有云计算平台，支持PHP、Java、Python语言，提供Web应用开发所需的总舵服务，国内最好的PaaS云计算平台</p>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衡智能应对大数据处理请求</li>
+                        <li>沙箱技术隔离应用</li>
+                        <li>无需运维管理与架构设计</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a class="btn btn-primary" href="#">了解详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video" id="B">
+            <a href="#">
+                <img style="width: 100%" class="img-responsive" src="img/video.png" alt="">
+            </a>
+        </div>
+        <div class="container" id="C">
+            <h3>产品特色</h3>
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="text-center">
+                        <img src="img/icon1.png" alt="">
+                        <p>安全可靠</p>
+                    </div>
+                    <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="text-center">
+                        <img src="img/icon2.png" alt="">
+                        <p>安全可靠</p>
+                    </div>
+                    <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="text-center">
+                        <img src="img/icon3.png" alt="">
+                        <p>安全可靠</p>
+                    </div>
+                    <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="text-center">
+                        <img src="img/icon4.png" alt="">
+                        <p>安全可靠</p>
+                    </div>
+                    <p>多层防护。多级备份，24小时全方位监控，放心托管你的应用于网站</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="D">
+            <h3>成功案例</h3>
+            <div class="row">
+                <div class="col-md-5 col-xs-12">
+                    <img style="width: 100%" class="img-responsive" src="img/typical.png" alt="">
+                </div>
+                <div class="col-md-7 col-xs-12">
+                    <p class="success">
+                        SAE作为公有云服务，其整体架构具有高可靠性和安全性，并具备专业的团队来负责安全及运营维护工作，因而极大地简化了项目组部署和维护工作，使得项目组能集中精力于核心业务的开发，为用户提供更好的体验。
+                    </p>
+                </div>
+            </div>
+        </div>
 
-			</div>
-		</div>
-	</div>
-	<div class="footer">
-		&copy; 2017 1234567890
-	</div>
+        <!--尾部-->
+        <div class="container footer" id="E">
+            <div class="row">
+                <div class="col-md-2 col-xs-6">
+                    <h3>产品</h3>
+                    <ul>
+                        <li> <a href="">云应用SAE</a></li>
+                        <li> <a href="">云应用SAE</a></li>
+                        <li> <a href="">云应用SAE</a></li>
+                        <li> <a href="">云应用SAE</a></li>
+                        <li> <a href="">云应用SAE</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>支持中心</h3>
+                    <ul>
+                        <li><a href="">产品文档</a></li>
+                        <li><a href="">产品文档</a></li>
+                        <li><a href="">产品文档</a></li>
+                        <li><a href="">产品文档</a></li>
+                        <li><a href="">产品文档</a></li>
+                        <li><a href="">产品文档</a></li>
+                        <li><a href="">产品文档</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>成功案例</h3>
+                    <ul>
+                        <li><a href="">游戏</a></li>
+                        <li><a href="">游戏</a></li>
+                        <li><a href="">游戏</a></li>
+                        <li><a href="">游戏</a></li>
+                        <li><a href="">游戏</a></li>
+                        <li><a href="">游戏</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="">招聘信息</a></li>
+                        <li><a href="">招聘信息</a></li>
+                        <li><a href="">招聘信息</a></li>
+                        <li><a href="">招聘信息</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h3>关于新浪云</h3>
+                    <p>掌上SAE客户端</p>
+                    <img src="img/sao.png" alt="">
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h3>可信云认证</h3>
+                    <img src="img/kexinyun.png" alt="">
+                    <a href="#">对象存储服务NO：02005</a>
+                    <a href="#">对象存储服务NO：02005</a>
+                    <a href="#">对象存储服务NO：02005</a>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <p class="text-center">
+                    Copyright &copy; 1996-2015 SINA Corporation All Rights Reserved. 京ICP证0000007-104
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
 </body>
 
 </html>
