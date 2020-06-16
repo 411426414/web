@@ -1,0 +1,84 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+		<link rel="stylesheet" href="css/global.css">
+		<link rel="stylesheet" href="css/open.css">
+		<title>开启宝箱</title>
+	</head>
+
+	<body ontouchstart="" class="open-body">
+		<div class="wrapper">
+			<div class="bg rotate"></div>
+			<div class="open-has ">
+				<h3 class="title-close"><span class="user">开心小窝</span>给你发了一个宝箱</h3>
+				<h3 class="title-open">恭喜你，<br />成功领取<span class="user">开心小窝</span>发的全民飞机大战宝箱</h3>
+				<div class="mod-chest">
+					<div class="chest-close show ">
+						<div class="gift"></div>
+						<div class="tips">
+							<i class="arrow"></i>
+						</div>
+					</div>
+					<!--砖石-->
+					<div class="chest-open ">
+						<div class="mod-chest-cont open-cont">
+							<div class="content">
+								<div class="gift">
+									<div class="icon">
+										<img src="img/chest-icon-zuan.png"></div> x 500
+								</div>
+								<div class="func">
+									<button class="chest-btn">查看详情并提取</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			var TouchEvent = {
+				tap: function(element, fn) {
+					var startX, startY, endX, endY
+					element.addEventListener('touchstart', function(e) {
+						//当前屏幕触摸点的坐标
+						startX = e.touches[0].clientX;
+						startY = e.touches[0].clientY;
+					}, false)
+					element.addEventListener('touchend', function(e) {
+						//当前事件的触摸点列表
+						endX = e.changedTouches[0].clientX;
+						endY = e.changedTouches[0].clientY;
+						//在部分设备上面touch事件比较灵敏，导致手指按下和松开时的坐标发生变化
+						//若果触摸点的X坐标和Y坐标小于0，就执行fn函数
+						if(Math.abs(startX - endX) < 10 && Math.abs(startY - endY) < 10) {
+							fn();
+						}
+					}, false)
+				}
+			}
+
+			var div = document.getElementsByClassName('show')[0];
+			TouchEvent.tap(div, function() {
+
+				$('.tips').css('opacity', '0');
+				$('.open-has .title-close').css('opacity', '0');
+				$('.mod-chest .chest-close .gift').css('opacity', '0');
+				$('.title-open').css('opacity', '1');
+				$('.open-has .mod-chest-cont').css('opacity', '1');
+				$('.mod-chest .chest-open').css({
+					'opacity': '1',
+					'top': '150px'
+				});
+				$('.mod-chest .chest-open .mod-chest-cont').css('bottom', '0');
+			})
+		</script>
+	</body>
+
+</html>
