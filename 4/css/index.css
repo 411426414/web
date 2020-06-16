@@ -1,0 +1,80 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #9d9d9d;
+    font-family: "隶书", Arial;
+}
+/*头部*/
+.navbar-default {
+     border: none;
+}
+#myNav{
+    background-color: #148CCA;
+}
+#myNav a{
+    color: white;
+    font-weight: bold;
+}
+.navbar-default .navbar-toggle,.navbar-default .navbar-toggle:hover{
+    background: transparent;
+    border: none;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: white;
+}
+
+/*主体*/
+.cont{
+    height: 300px;
+    margin-top: 30px;
+}
+.cont h3{
+    color: blueviolet;
+}
+.cont .btn-primary{
+    margin-top: 20px;
+}
+.video{
+    margin-top: 30px;
+}
+
+
+.success{
+    margin-top: 100px;
+}
+.footer ul {
+    list-style: none;
+}
+
+
+
+@media (max-width: 768px) {
+    p,li{
+        font-size: 14px;
+    }
+    .nav.navbar-nav.navbar-right{
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        font-size: 1em;
+    }
+    .cont img{
+        width: 40%;
+    }
+    .cont h3{
+        font-size: 16px;
+    }
+    .cont .btn-center{
+        text-align: center;
+    }
+    .cont .btn-primary {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    .success{
+        margin-top: 0;
+    }
+}
