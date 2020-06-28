@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<!-- 
+		 1、使用带有touch功能的Zepto文件实现 
+		 2、使用类选择器、find()筛选需要的元素 
+		 3、使用hasClass,removeClass,addClass 等方法来判断扇形菜单是否处于打开状态，
+		 如果是打开状态，则关闭，如果关闭状态，则打开。 
+		 4、提交.html文件即可，文件命名为学号尾号+姓名，如"01张三.html"。其他css文件，js文件都不需要提交。
+	-->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>扇形菜单</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+	<html>
+
+	<body>
+
+		<div class="wrap">
+			<div class="menu"><img class="icon_menu" src="image/menu.png" /><span></span></div>
+			<div class="btn btn1" data-num="1"><span>照相</span></div>
+			<div class="btn btn2" data-num="2"><span>位置</span></div>
+			<div class="btn btn3" data-num="3"><span>音乐</span></div>
+			<div class="btn btn4" data-num="4"><span>聊天</span></div>
+		</div>
+
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript">
+			$('.menu').tap(function(){
+
+				if (!$('.btn1').hasClass("open")) {
+					$('.btn1').addClass('open');
+				}else{
+					$('.btn1').removeClass('open');
+				}
+				if (!$('.btn2').hasClass("open")) {
+					$('.btn2').addClass('open');
+				}else{
+					$('.btn2').removeClass('open');
+				}
+				if (!$('.btn3').hasClass("open")) {
+					$('.btn3').addClass('open');
+				}else{
+					$('.btn3').removeClass('open');
+				}
+				if (!$('.btn4').hasClass("open")) {
+					$('.btn4').addClass('open');
+				}else{
+					$('.btn4').removeClass('open');
+				}
+				// alert($('.btn1').hasClass("open"))-->true
+			})
+		</script>
+	</body>
+</html>
