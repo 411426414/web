@@ -18,7 +18,7 @@
 
 # 7 [扇形菜单](https://411426414.github.io/web/扇形菜单/index.html)
 
-# 8 [手机项目](https://411426414.github.io/web/手机项目/index.html)
+# 8 [手机项目](https://411426414.github.io/web/7/index.html)
 
 # [HTML](https://411426414.github.io/web/HTML.jpg)
 
