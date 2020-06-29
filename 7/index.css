@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	color: #FFF;
+}
+.on{
+	border-bottom: 2px solid orange;
+}
+.on a{
+	color: orange;
+}
+ul{
+	margin-bottom: 0;
+}
+
+#header{
+	background: rebeccapurple; 
+	overflow:hidden;
+}
+.menu-content .top{
+	display: inline-block;
+}
+.menu-content .top li{
+	float: left;
+	color: #FFF;
+	width: 35px;
+	text-align: center;
+	margin: 0 1px;
+}
+.menu-btn{
+	margin-right: 20px;
+	float: right;
+}
+
+/*第二部分*/
+.search-wrap {
+	position: absolute;
+	top: 46px;
+	left: 20px;
+	z-index: 2;
+}
+.search-wrap .search-box{
+	width: 277px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 30px;
+	background-color: #FFFFFF;
+}
+.search-wrap .search-box span{
+	margin-left: 10px;
+}
+
+
+/*轮播图*/
+#Rotation{
+	width: 100%;
+	height: 184px;
+	background-image:url(./images/img/banner1.jpg);
+	background-size: 100% 100%;
+}
+
+/*第四部分：图片导航开始*/
+.content-menu ul{
+	height: 50px;
+	line-height: 50px;
+}
+.content-menu ul li{
+	width: 20%;
+	float: left;
+	margin: 0 7px;
+}
+.content-menu ul li img{
+	margin-top: 10px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+}
+
+/*猜你喜欢开始20分*/
+#link span{
+	display: inline-block;
+}
+#like .love_font{
+	float: left;
+	font-size: 16px;
+}
+#like .love_select{
+	float: right;
+}
+
+.part_display_none{
+	display: none;
+}
+#part1,#part2{
+	height: 50px;
+	line-height: 50px;
+}
+#part1 ul li,#part2 ul li{
+	width: 20%;
+	float: left;
+	margin: 0 7px;
+}
+
+#part1 ul li img,#part2 ul li img{
+	height: 85px;
+	width: 60px;
+}
+.vor{
+	position: relative;
+	height: 100px;
+}
+#button{
+	position: absolute;
+	top: 350px;
+}
+#button button {
+    width: 320px;
+    height: 40px;
+}
+
+/*媒体对象*/
+#message{
+	width: 100%;
+	height: 100px;
+}
+#message img{
+	width: 20%;
+	height: 80px;
+}
+#message #right{
+	display: inline-block;
+	width: 70%;
+	height: 100px;
+}
+#message #right .p{
+	margin-top: 20px;
+}
+
+.m6{
+	margin-top: 50px;
+	float: left;
+}

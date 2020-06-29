@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,
+			maximum-scale=1.0,minimum-scale=1.0" />
+		<title>项目三_首页: 郑杰 18741 13</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script>
+			jQuery.noConflict()
+		</script>
+		<style type="text/css">
+			.media-heading {
+				font-size: 0.35rem;
+				font-weight: bolder;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				color: #FFF;
+			}
+			.on{
+				border-bottom: 2px solid orange;
+			}
+			.on a{
+				color: orange;
+			}
+			ul{
+				margin-bottom: 0;
+			}
+
+			#header{
+				background: rebeccapurple;
+				overflow:hidden;
+			}
+			.menu-content .top{
+				display: inline-block;
+			}
+			.menu-content .top li{
+				float: left;
+				color: #FFF;
+				width: 35px;
+				text-align: center;
+				margin: 0 1px;
+			}
+			.menu-btn{
+				margin-right: 20px;
+				float: right;
+			}
+
+			/*第二部分*/
+			.search-wrap {
+				position: absolute;
+				top: 46px;
+				left: 20px;
+				z-index: 2;
+			}
+			.search-wrap .search-box{
+				width: 277px;
+				height: 25px;
+				line-height: 25px;
+				border-radius: 30px;
+				background-color: #FFFFFF;
+			}
+			.search-wrap .search-box span{
+				margin-left: 10px;
+			}
+
+
+			/*轮播图*/
+			#Rotation{
+				width: 100%;
+				height: 184px;
+				background-image:url(./images/img/banner1.jpg);
+				background-size: 100% 100%;
+			}
+
+			/*第四部分：图片导航开始*/
+			.content-menu ul{
+				height: 50px;
+				line-height: 50px;
+			}
+			.content-menu ul li{
+				width: 20%;
+				float: left;
+				margin: 0 7px;
+			}
+			.content-menu ul li img{
+				margin-top: 10px;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 50%;
+			}
+
+			/*猜你喜欢开始20分*/
+			#link span{
+				display: inline-block;
+			}
+			#like .love_font{
+				float: left;
+				font-size: 16px;
+			}
+			#like .love_select{
+				float: right;
+			}
+
+			.part_display_none{
+				display: none;
+			}
+			#part1,#part2{
+				height: 50px;
+				line-height: 50px;
+			}
+			#part1 ul li,#part2 ul li{
+				width: 20%;
+				float: left;
+				margin: 0 7px;
+			}
+
+			#part1 ul li img,#part2 ul li img{
+				height: 85px;
+				width: 60px;
+			}
+			.vor{
+				position: relative;
+				height: 100px;
+			}
+			#button{
+				position: absolute;
+				top: 350px;
+			}
+			#button button {
+				width: 320px;
+				height: 40px;
+			}
+
+			/*媒体对象*/
+			#message{
+				width: 100%;
+				height: 100px;
+			}
+			#message img{
+				width: 20%;
+				height: 80px;
+			}
+			#message #right{
+				display: inline-block;
+				width: 70%;
+				height: 100px;
+			}
+			#message #right .p{
+				margin-top: 20px;
+			}
+
+			.m6{
+				margin-top: 50px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="menu-content">
+				<ul class="top">
+					<li><a href="" class="on">推荐</a></li>
+					<li><a href="">VIP</a></li>
+					<li><a href="">小说</a></li>
+					<li><a href="">直播</a></li>
+					<li><a href="">儿童</a></li>
+					<li><a href="">广播</a></li>
+					<li><a href="">精品</a></li>
+				</ul>
+				<div class="menu-btn">
+					<svg class="bi bi-grid" width="1.3em" height="1.3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<!--内容区域开始-->
+		<div id="wrapper">
+			<div class="search-wrap">
+            	<div class="search-box">
+					<span class="glyphicon glyphicon glyphicon-search"></span>
+					<input type="search" style="width: 222px;">
+					<svg class="bi bi-mic" width="1.3em" height="1.3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+						<path fill-rule="evenodd" d="M10 8V3a2 2 0 1 0-4 0v5a2 2 0 1 0 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+					</svg>
+				</div>
+            </div>
+			<div id="scroller">
+				<!--第三部分： banner开始  轮播图15分 -->
+				<div class="i-banner clearfix">
+					<div id="images" class="carousel" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-toggle="#images" data-slide-to="1" class="active">1</li>
+							<li data-toggle="#images" data-slide-to="2">2</li>
+							<li data-toggle="#images" data-slide-to="3">3</li>
+							<li data-toggle="#images" data-slide-to="4">4</li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<a href=""><img src="images/img/banner1.jpg" alt=""></a>
+							</div>
+							<div class="item">
+								<a href=""><img src="images/img/banner2.jpg" alt=""></a>
+							</div>
+							<div class="item">
+								<a href=""><img src="images/img/banner3.jpg" alt=""></a>
+							</div>
+							<div class="item">
+								<a href=""><img src="images/img/banner4.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<script>
+						$(function () {
+							$('.carousel').carousel('cycle')
+						})
+					</script>
+				</div>
+				<!-- 第三部分：banner结束 -->
+				<!-- 第四部分：图片导航开始  15分 -->
+				<div class="content-menu">
+					<ul>
+						<li>
+							<img src="./images/icon/btnlist0323_03.jpg" alt="">
+							<span>经典必读</span>
+						</li>
+						<li>
+							<img src="./images/img/guonei0407_13.jpg" alt="">
+							<span>经典必读</span>
+						</li>
+						<li>
+							<img src="./images/icon/btnlist0323_12.jpg" alt="">
+							<span>经典必读</span>
+						</li>
+						<li>
+							<img src="./images/icon/btnlist0323_06.jpg" alt="">
+							<span>经典必读</span>
+						</li>
+					</ul>
+				</div>
+				<!-- 第四部分：图片导航结束-->
+				<!--第五部分：猜你喜欢开始20分-->
+				<article class="clearfix vor">
+					<div>
+						<span class="love_font">猜你喜欢</span>
+						<span class="love_select">选择兴趣&nbsp;|&nbsp;更多></span>
+					</div>
+					<!--第一部分-->
+					<div id="part1">
+						<!--第一行-->
+						<ul>
+							<li>
+								<img src="./images/book1.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book2.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book3.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book5.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+						</ul>
+
+						<!--第二行-->
+						<ul>
+							<li>
+								<img src="./images/book1.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book2.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book3.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book5.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+						</ul>
+					</div>
+					<!--第二部分-->
+					<div id="part2" class="part_display_none">
+						<!--第一行-->
+						<ul>
+							<li>
+								<img src="./images/book5.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book6.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book7.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book8.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+						</ul>
+
+						<!--第二行-->
+						<ul>
+							<li>
+								<img src="./images/book5.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book6.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book7.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+							<li>
+								<img src="./images/book8.jpg" alt="">
+								<span>经典必读</span>
+							</li>
+						</ul>
+					</div>
+					<!--刷新按钮-->
+					<div id="button">
+						<button type="button" class="fresh" id="fresh_btn">
+							<svg class="bi bi-arrow-repeat" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M2.854 7.146a.5.5 0 0 0-.708 0l-2 2a.5.5 0 1 0 .708.708L2.5 8.207l1.646 1.647a.5.5 0 0 0 .708-.708l-2-2zm13-1a.5.5 0 0 0-.708 0L13.5 7.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0 0-.708z"/>
+								<path fill-rule="evenodd" d="M8 3a4.995 4.995 0 0 0-4.192 2.273.5.5 0 0 1-.837-.546A6 6 0 0 1 14 8a.5.5 0 0 1-1.001 0 5 5 0 0 0-5-5zM2.5 7.5A.5.5 0 0 1 3 8a5 5 0 0 0 9.192 2.727.5.5 0 1 1 .837.546A6 6 0 0 1 2 8a.5.5 0 0 1 .501-.5z"/>
+							</svg>
+							<span>换一批</span>
+						</button>
+					</div>
+				</article>
+				<!--第五部分：猜你喜欢结束-->
+				<!--第六部分：特别介绍开始15分-->
+				<div class="m6">
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" src="images/book8.jpg" style="width: 50px;height: 50px">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">三只老鼠爱你的人记得你</h4>
+							<p>
+								放飞想象，让宝贝感受大千世界的神奇
+								<span class="glyphicon glyphicon-play-circle"></span>
+							</p>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" src="images/book8.jpg" style="width: 50px;height: 50px">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">三只老鼠爱你的人记得你:中了魔法的...</h4>
+							<p>
+								放飞想象，让宝贝感受大千世界的神奇
+								<span class="glyphicon glyphicon-play-circle"></span>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<!--第六部分：特别介绍结束-->
+			</div>
+		</div>
+		<!--第七部分：底部5分-->
+		<div id="footer">
+			<a href="#" class="home active">
+				<span></span>
+				<p>首页</p>
+			</a>
+			<a href="#" class="destination">
+				<span></span>
+				<p>我听</p>
+			</a>
+			<a href="#" class="history">
+				<span></span>
+				<p>发现</p>
+			</a>
+			<a href="myinfo.html" class="my">
+				<span></span>
+				<p>郑杰</p>
+			</a>
+		</div>
+		<!--返回头部开始-->
+	</body>
+
+</html>
+<script src="lib/flexible.js"></script>
+<script src="lib/iscroll.js"></script>
+<script src="js/zepto.js"></script>
+<script>
+	$("#fresh_btn").tap(function() {
+		if($("#part1").hasClass("part_display_none")) {
+			$("#part2").addClass("part_display_none");
+			$("#part1").removeClass("part_display_none");
+		} else {
+			$("#part1").addClass("part_display_none");
+			$("#part2").removeClass("part_display_none");
+		}
+	});
+</script>
